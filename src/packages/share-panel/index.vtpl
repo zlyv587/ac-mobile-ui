@@ -1,0 +1,10 @@
+
+<div :class="['share-content', shareContentCls]" :style="sty">
+    <div v-for="(item, index) in shareContent" :key="index" class="item" @click="share(item)">
+        <img :src="item.img" alt="">
+        <div class="text">{{item.text}}</div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,5 @@
+<div class="content-template">
+    <img :src="qrCodeUrl" class="qr-code">
+    <div class="tip">保存图片→打开微信扫一扫→入群赢取惊喜福利</div>
+</div>
+

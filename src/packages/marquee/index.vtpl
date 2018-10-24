@@ -1,0 +1,10 @@
+<div class="marquee-wrap">
+    <div class="inner" :style="translateStyle">
+        <div v-for="(item, index) in dataSource" class="item">
+            <div class="avatar"><img :src="item.avatar"></div>
+            <div class="msg">{{getClearBr(item.text)}}</div>
+        </div>
+    </div>
+</div>
+
+
