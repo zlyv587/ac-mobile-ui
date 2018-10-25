@@ -1,5 +1,5 @@
-<alert-modal :title="title":onClose="close" :visibleProp="visibleProp" :showMask="showMask" :isCanClickMask="true" alertContainerCls="container-share" :showCancelBtn="false" :showConfirmBtn="false" :showCloseIcon="false">
-    <share-panel :shareLink="shareLink" :close="close" :shareContent="shareContent" :options="options"></share-panel>
-</alert-modal>
+<modal :title="title":onClose="close" :visibleProp="visibleProp" :showMask="showMask" :isCanClickMask="true" bgContainerCls="share-bg-container" :showCancelBtn="false" :showConfirmBtn="false" :showCloseIcon="false">
+    <share-panel :shareLink="shareCb" :shareContent="shareContent"></share-panel>
+</modal>
 
 

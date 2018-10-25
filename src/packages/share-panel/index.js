@@ -3,26 +3,22 @@
  */
 import withRender from "./index.vtpl";
 import './index.less';
-import {shareWX, randomShareTxt, getShareUrl, handleAntAnalysis} from '../../common/util';
 import wxFriendImg from './img/Group 10.png';
 import friendGroupsImg from './img/Group 11.png';
 import qqFaceImg from './img/qq_face.png';
-import ShareCard from '../../data/models/ShareCard'
-const shareCardModel = new ShareCard();
+
 
 
 export default withRender({
-    name: 'share-panel',
+    name: 'SharePanel',
     props: {
         shareContentCls: {
             type: String,
             default: '',
         },
-        sty: {
-            type: Object,
-        },
         title: {
             type: String,
+            default: '',
         },
         shareContent: {
             type: Array,
@@ -53,41 +49,10 @@ export default withRender({
 
             }
         },
-        close: {
-            type: Function,
-            default: function () {
-
-            }
-        },
-        options: {
-            type: Object,
-            default: function () {
-                return null;
-            },
-        }
     },
     methods: {
         share({tag, reportType}) {
-            let options;
-            options = randomShareTxt();
-            const { clientMoney, userId, bottomWithDrawMoney } = this.$activityInfo;
-            options = Object.assign(options, this.options);
-            let { type } = this.options;
-            type = type ? `@${type}` : '';
-            handleAntAnalysis(`${reportType}${type}`);
-            shareCardModel.get({}).then(res=> {
-                const urlQueryParams = {
-                    shareCode: res.info,
-                    fr: 'weChat',
-                    ttm: clientMoney,
-                    btm: bottomWithDrawMoney,
-                    name: encodeURI(userId)
-                }
-                options.shareUrl = getShareUrl(urlQueryParams);
-                shareWX({...options, tag,});
-                this.shareLink(tag);
-                this.close();
-            });
+            this.shareLink({tag, reportType});
         },
     }
 })

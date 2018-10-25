@@ -25,7 +25,7 @@ function initVueInstance({qrCodeUrl,}) {
 }
 
 export default (options = {}) => {
-    let {qrCodeUrl, requestUrl, isNewsapp, onConfirm = loop, cb = loop, joinGroupPageUrl} = options;
+    let {qrCodeUrl, requestUrl, isNewsapp, onConfirm = loop, onShowHook = loop, joinGroupPageUrl} = options;
     qrCodeUrl = qrCodeUrl || defaultQrCodeUrl;
     if (!qrCodeUrl) {
         fetch({
@@ -54,9 +54,11 @@ export default (options = {}) => {
                 ...options,
                 showConfirmBtn: true,
                 confirmBtnText: '保存图片',
-                onConfirm,
+                onConfirm() {
+                    onConfirm(qrCodeUrl)
+                }
             };
-            cb();
+            onShowHook();
             modalBox(options);
         } else {
             window.location.href = joinGroupPageUrl;

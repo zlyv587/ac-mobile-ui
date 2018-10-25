@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import shareOptions from './index.js';
-import {isVNode} from '../../common/vdom';
+import {isVNode} from '../../util/vdom';
 
-const shareConstructor = Vue.extend(shareOptions);
+const ShareConstructor = Vue.extend(shareOptions);
 let instance;
 
 export default function share(options) {
   if (instance) {
     instance.vm.destroyElement();
   }
-  instance = new shareConstructor({
+  instance = new ShareConstructor({
     propsData: {
       ...options,
       visibleProp: 'block',

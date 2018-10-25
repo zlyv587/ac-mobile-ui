@@ -3,13 +3,12 @@
  */
 import withRender from "./index.vtpl";
 import './index.less';
-import { shareWX } from '../../common/util';
-import alertModal from '../alert';
-import sharePanel from '../share-panel';
+import Modal from '../modal';
+import SharePanel from '../share-panel';
 
 export default withRender({
-  name: 'share-modal',
-  components: {alertModal, sharePanel},
+  name: 'ShareModal',
+  components: {Modal, SharePanel},
   props: {
     visibleProp: {
       type: String,
@@ -41,16 +40,14 @@ export default withRender({
 
       }
     },
-    options: {
-      type: Object,
-      default: function () {
-        return null;
-      },
-    }
   },
   methods: {
     close() {
       this.onClose();
+    },
+    shareCb(options) {
+      this.shareLink(options);
+      this.close();
     },
     destroyElement() {
       this.$destroy(true);

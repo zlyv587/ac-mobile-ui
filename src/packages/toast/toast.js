@@ -2,14 +2,14 @@ import Vue from 'vue';
 import toastOptions from './index.js';
 import {isVNode} from '../../util/vdom';
 
-const toastConstructor = Vue.extend(toastOptions);
+const ToastConstructor = Vue.extend(toastOptions);
 let instance;
 
 export default function toast(options) {
   if (instance) {
     instance.vm.destroyElement();
   }
-  instance = new toastConstructor({
+  instance = new ToastConstructor({
     propsData: {
       ...options,
       visibleProp: 'block',

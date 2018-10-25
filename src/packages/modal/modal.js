@@ -1,15 +1,15 @@
 import Vue from 'vue';
-import alertOptions from './index.js';
+import modalOptions from './index.js';
 import {isVNode} from '../../util/vdom';
 
-const alertConstructor = Vue.extend(alertOptions);
+const ModalConstructor = Vue.extend(modalOptions);
 let instance;
 
-export default function alert(options) {
+export default function modal(options) {
   if (instance) {
     instance.vm.destroyElement();
   }
-  instance = new alertConstructor({
+  instance = new ModalConstructor({
     propsData: {
       ...options,
       visibleProp: 'block',

@@ -4,12 +4,14 @@
 const path = require("path");
 const webpack = require("webpack");
 const uglify = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
     devtool: 'source-map',
     entry: "./src/index.js",//入口文件，就是上步骤的src目录下的index.js文件，
     output: {
-        path: path.resolve(__dirname, './lib'),//输出路径，就是上步骤中新建的dist目录，
+        path: path.resolve(__dirname, './lib'),//输出路径，就是上步骤中新建的lib目录，
         publicPath: '/lib/',
         filename: 'acMobileUi.min.js',
         libraryTarget: 'umd',
@@ -20,10 +22,16 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" },
-                    { loader: "less-loader" }
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                    "less-loader"
                 ]
+            },
+            {
+                // enforce: 'post',
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
             },
             {
                 test: /\.vtpl$/,
@@ -53,6 +61,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: `style/acMobileUi.min.css`
+        }),
+        new OptimizeCSSAssetsPlugin({}),
         new webpack.DefinePlugin({
             "process.env": {
                 NODE_ENV: JSON.stringify("production")
