@@ -46,13 +46,19 @@ this.$modalBox(Object options)
 ```javascript
 import {SharePanel} from '@newap/ac-mobile-ui'
 ```
+
+ dog | bird | cat
+ ----|------|----
+ foo | foo  | foo
+ bar | bar  | bar
+ baz | baz  | baz
  参数说明
-|参数            |类型                    |说明                |默认值                  |可选值 |
-| -------------  |:----------------------:| ------------------:| ----------------------:| -----:|
-|shareContentCls  |string                 |最外div样式类         | ——                    |——|
-|title            |string                 |标题                   |''                      |——|
-|shareContent     |Array                  |分享的平台             |....                    |....|
-|shareLink   |Function({tag,reportType})  |分享的回调             |——                    |——|
+  参数            |类型                       |说明                |默认值                 |可选值
+ -----------------|---------------------------|--------------------| ----------------------|------
+ shareContentCls  |string                     |最外div样式类       | ——                  |——
+ title            |string                     |标题                |''                     |——
+ shareContent     |Array                      |分享的平台          |....                   |....
+ shareLink        |Function({tag,reportType}) |分享的回调          |——                   |——
 
 4.ShareModal 分享的弹框
 ```javascript
@@ -112,8 +118,3 @@ import {Marquee} from '@newap/ac-mobile-ui'
 <marquee/>
  ```
 
- dog | bird | cat
- ----|------|----
- foo | foo  | foo
- bar | bar  | bar
- baz | baz  | baz
