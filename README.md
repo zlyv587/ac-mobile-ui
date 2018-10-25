@@ -111,3 +111,9 @@ import {ShareModal} from '@newap/ac-mobile-ui'
 import {Marquee} from '@newap/ac-mobile-ui'
 <marquee/>
  ```
+
+ dog | bird | cat
+ ----|------|----
+ foo | foo  | foo
+ bar | bar  | bar
+ baz | baz  | baz
