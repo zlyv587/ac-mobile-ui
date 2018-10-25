@@ -47,12 +47,6 @@ this.$modalBox(Object options)
 import {SharePanel} from '@newap/ac-mobile-ui'
 ```
 
- dog | bird | cat
- ----|------|----
- foo | foo  | foo
- bar | bar  | bar
- baz | baz  | baz
- 参数说明
   参数            |类型                       |说明                |默认值                 |可选值
  -----------------|---------------------------|--------------------| ----------------------|------
  shareContentCls  |string                     |最外div样式类       | ——                  |——
