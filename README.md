@@ -45,12 +45,14 @@ this.$modalBox(Object options)
 3. SharePanel 端内显示在底部分享的panel
 ```javascript
 import {SharePanel} from '@newap/ac-mobile-ui'
+```
  参数说明
- 参数            类型                      说明                默认值                  可选值
-shareContentCls  string                 最外div样式类          ——                     ——
-title            string                 标题                   ''                       ——
-shareContent     Array                  分享的平台             ....                     ....
-shareLink   Function({tag,reportType})  分享的回调             ——                     ——
+|参数            |类型                    |说明                |默认值                  |可选值 |
+| -------------  |:----------------------:| ------------------:| ----------------------:| -----:|
+|shareContentCls  |string                 |最外div样式类         | ——                    |——|
+|title            |string                 |标题                   |''                      |——|
+|shareContent     |Array                  |分享的平台             |....                    |....|
+|shareLink   |Function({tag,reportType})  |分享的回调             |——                    |——|
 
 4.ShareModal 分享的弹框
 ```javascript
