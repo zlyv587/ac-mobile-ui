@@ -98,13 +98,13 @@ import {ShareModal} from '@newap/ac-mobile-ui'
  // 若没有
   import { toast } from '@newap/ac-mobile-ui'
   ```
-     参数           |类型           |说明                 |默认值                  |可选值
-     ---------------|---------------|---------------------|------------------------|------
-     type           |string         |提示类型             |——                    |success/error/warning/regret
-     delayCount     |int            |显示多久(ms)         |2000                    | ——
-     icon           |string         |自定义icon地址       |——                    | ——
-     msg            |string         |提示内容             |——                    | ——
-     onClose        |Function       |关闭回调             |——                    | ——
+   参数           |类型           |说明                 |默认值                  |可选值
+   ---------------|---------------|---------------------|------------------------|----------------------------
+   type           |string         |提示类型             |——                    |success/error/warning/regret
+   delayCount     |int            |显示多久(ms)         |2000                    | ——
+   icon           |string         |自定义icon地址       |——                    | ——
+   msg            |string         |提示内容             |——                    | ——
+   onClose        |Function       |关闭回调             |——                    | ——
 
 8.Marquee   活动常用跑马灯展示中奖的人
 ```javascript
