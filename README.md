@@ -12,7 +12,8 @@
  ```
 
 ## 具体组件
-1.Modal 弹框
+
+### Modal 弹框
 ```javascript
 import {Modal} from '@newap/ac-mobile-ui'
 <modal />
@@ -35,14 +36,14 @@ import {Modal} from '@newap/ac-mobile-ui'
 |showConfirmBtn  |Boolean           |是否显示确认按钮       |true                        |true/false
 |showCancelBtn   |Boolean           |是否显示取消按钮       |true                        |true/false
 
-2. modalBox Modal组件的js调用方式，参数与Modal一致
+### modalBox Modal组件的js调用方式，参数与Modal一致
 ```javascript
 // 如果组件库全局注册
 this.$modalBox(Object options)
 // 若没有
  import { modalBox } from '@newap/ac-mobile-ui'
  ```
-3. SharePanel 端内显示在底部分享的panel
+### SharePanel 端内显示在底部分享的panel
 ```javascript
 import {SharePanel} from '@newap/ac-mobile-ui'
 ```
@@ -54,7 +55,7 @@ import {SharePanel} from '@newap/ac-mobile-ui'
  shareContent     |Array                      |分享的平台          |....                   |....
  shareLink        |Function({tag,reportType}) |分享的回调          |——                   |——
 
-4.ShareModal 分享的弹框
+### ShareModal 分享的弹框
 ```javascript
 import {ShareModal} from '@newap/ac-mobile-ui'
 <share-modal />
@@ -69,14 +70,14 @@ import {ShareModal} from '@newap/ac-mobile-ui'
  shareLink        |Function({tag,reportType}) |分享的回调          |——                     |——
  onClose          |Function                   |modal关闭回调       |——                     |——
 
- 5.shareModalBox ShareModal的js 调用方式 参数与其一致
+### shareModalBox ShareModal的js 调用方式 参数与其一致
  ```javascript
  // 如果组件库全局注册
  this.$shareModalBox(Object options)
  // 若没有
   import { shareModalBox } from '@newap/ac-mobile-ui'
   ```
-6.joinGroupModal 加群弹框
+### joinGroupModal 加群弹框
  ```javascript
  // 如果组件库全局注册
  this.$joinGroupModal(Object options)
@@ -91,7 +92,7 @@ import {ShareModal} from '@newap/ac-mobile-ui'
    onConfirm      |Function(qrCodeUrl) |确认回调             |——                    |——
    onShowHook     |Function            |弹框显示时的回调     | ——                   |——
 
-7. toast 消息提示
+### toast 消息提示
 ```javascript
  // 如果组件库全局注册
  this.$toast(Object options)
@@ -106,7 +107,7 @@ import {ShareModal} from '@newap/ac-mobile-ui'
    msg            |string         |提示内容             |——                    | ——
    onClose        |Function       |关闭回调             |——                    | ——
 
-8.Marquee   活动常用跑马灯展示中奖的人
+### Marquee   活动常用跑马灯展示中奖的人
 ```javascript
 import {Marquee} from '@newap/ac-mobile-ui'
 <marquee/>

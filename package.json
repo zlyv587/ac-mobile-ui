@@ -1,6 +1,6 @@
 {
   "name": "@newap/ac-mobile-ui",
-  "version": "0.0.3wan",
+  "version": "0.0.4",
   "description": "",
   "main": "lib/acMobileUi.min.js",
   "scripts": {
