@@ -59,15 +59,15 @@ import {SharePanel} from '@newap/ac-mobile-ui'
 import {ShareModal} from '@newap/ac-mobile-ui'
 <share-modal />
  ```
-  参数说明
-  参数            类型                      说明                默认值                  可选值
- visibleProp      string                 是否可见               none                    block/none
- showMask         Boolean                是否显示遮罩           true                    true/false
- shareContentCls  string                 最外div样式类          ——                     ——
- title            string                 标题                   ''                       ——
- shareContent     Array                  分享的平台             ....                     ....
- shareLink   Function({tag,reportType})  分享的回调             ——                     ——
- onClose        Function                 modal关闭回调          ——                     ——
+  参数            |类型                       |说明                |默认值                   |可选值
+  ----------------|---------------------------|--------------------| ------------------------|------
+ visibleProp      |string                     |是否可见            |none                     |block/none
+ showMask         |Boolean                    |是否显示遮罩        |true                     |true/false
+ shareContentCls  |string                     |最外div样式类       |——                     |——
+ title            |string                     |标题                |''                       |——
+ shareContent     |Array                      |分享的平台          |....                     |....
+ shareLink        |Function({tag,reportType}) |分享的回调          |——                     |——
+ onClose          |Function                   |modal关闭回调       |——                     |——
 
  5.shareModalBox ShareModal的js 调用方式 参数与其一致
  ```javascript
