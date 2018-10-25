@@ -12,7 +12,7 @@ export default withRender({
   props: {
     visibleProp: {
       type: String,
-      default: ''
+      default: 'none'
     },
     showMask: {
       type: Boolean,
