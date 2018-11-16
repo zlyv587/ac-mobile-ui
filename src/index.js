@@ -10,7 +10,7 @@ import ShareModal from './packages/share-modal/index.js';
 import shareModalBox from './packages/share-modal/share.js';
 import joinGroupModalBox from './packages/join-group-modal/index.js';
 
-
+console.log('pull testing')
 
 const components = {
     Modal,
